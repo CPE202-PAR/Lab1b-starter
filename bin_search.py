@@ -36,4 +36,4 @@ def bin_search_rec(int_list: Optional[List], target: int) -> Optional[int]:
 # Python List, number, number, number -> number or None
 def bin_search_rec_helper(int_list: List, target: int, low: int, high: int) -> Optional[int]:
     """ searches for target in int_list[low..high] and returns index if found"""
-
+    pass
