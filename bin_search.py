@@ -1,9 +1,12 @@
 # CPE 202 Lab 1b
-from typing import List, Optional
+from typing import List, Union, TypeAlias
+
+Maybe_IntList: TypeAlias = Union[None, List[int]]
+Maybe_Integer: TypeAlias = Union[None, int]
 
 # Binary Search using iteration
 # Python List (or None), number -> number or None
-def bin_search_iter(int_list: Optional[List], target: int) -> Optional[int]:
+def bin_search_iter(int_list: Maybe_IntList, target: int) -> Maybe_Integer:
     """ searches for target in int_list and returns associated index if found, otherwise returns None
         int_list must be in ascending order for Binary Search to return proper result
         if int_list is None, raise ValueError"""
@@ -24,7 +27,7 @@ def bin_search_iter(int_list: Optional[List], target: int) -> Optional[int]:
 
 # Binary Search using recursion
 # Python List (or None), number -> number or None
-def bin_search_rec(int_list: Optional[List], target: int) -> Optional[int]:
+def bin_search_rec(int_list: Maybe_IntList, target: int) -> Maybe_Integer:
     """ searches for target in int_list and returns associated index if found, otherwise returns None
         int_list must be in ascending order for Binary Search to return proper result
         if int_list is None, raise ValueError"""
@@ -34,6 +37,6 @@ def bin_search_rec(int_list: Optional[List], target: int) -> Optional[int]:
 
 # Recursive helper function
 # Python List, number, number, number -> number or None
-def bin_search_rec_helper(int_list: List, target: int, low: int, high: int) -> Optional[int]:
+def bin_search_rec_helper(int_list: List, target: int, low: int, high: int) -> Maybe_Integer:
     """ searches for target in int_list[low..high] and returns index if found"""
     pass
